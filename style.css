@@ -1,0 +1,286 @@
+/* Main CSS */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #4b4bb5b5;
+   
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    animation: color-change 2s infinite;
+}
+@keyframes color-change {
+    0% {
+      background-color: #aecde8;
+    }
+    10%{
+        background-color: #5e9fd9;
+    }
+    20%{
+        background-color: #498dc9;
+    }
+    30%{
+        background-color: #1d63a0;
+    }
+    40%{
+        background-color: #1f486c;
+    }
+    50% {
+      background-color: #172d51;
+    }
+    60%{
+        background-color: #182b3b;
+    }
+    70%{
+        background-color: #122230;
+    }
+    80%{
+        background-color: #0a151f;
+    }
+    90%{
+        background-color: #07141f;
+    }
+
+    100% {
+      background-color: #050e19;
+    }
+  }
+#container {
+    
+    background-color: #e1e0e0;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 100%;
+    height: 730px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    min-height: 80vh;
+    min-width: 90vw;
+}
+
+#list-header {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+
+
+#addNoteDiv {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addNoteDiv:hover {
+    transition: 0.25s;
+    background-color: #f1f1f1;
+}
+
+
+#addNoteDiv i {
+    font-size: 70px;
+    color: gainsboro;
+}
+
+
+/* List CSS */
+#list-container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+li {
+    background-color: #3b0b0bd4;
+    margin: 5px 0;
+    padding: 20px;
+    border-radius: 8px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow:  9px 9px 18px #b3b3b3,
+             -9px -9px 18px #ffffff;
+}
+
+li span {
+    font-size: 12px;
+    flex-grow: 1;
+    word-wrap: break-word;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    line-break: loose;
+}
+
+#editBtn,
+#deleteBtn {
+    background-color: #c6aaff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px; 
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 60px;
+}
+
+#editBtn {
+    background-color: rgba(143, 178, 247, 0.749);
+}
+
+#deleteBtn:hover {
+    background-color: #8c53ff;
+}
+
+#editBtn:hover {
+    background-color: rgb(150, 143, 243);
+}
+
+
+/* Create Note Popup CSS */
+#popupContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 600px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    width: 600px;
+    height: 500px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: larger;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #8c53ff;
+}
+
+#btn-container {
+    display: flex;
+}
+
+#submitBtn, #closeBtn {
+    width: 100px;
+    background-color: #8c53ff;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#closeBtn {
+    background-color: gainsboro;
+}
+
+
+/* Editing Popup CSS */
+#editing-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 600px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: "Delius", cursive;
+}
+
+#submitBtn, #closeBtn {
+    width: 100px;
+    background-color: #8c53ff;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#closeBtn {
+    background-color: gainsboro;
+}
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+span{
+    color: white;
+ 
+    overflow: hidden;
+    font-family: "Delius", cursive;
+    font-size: 12px;
+    flex-grow: 1;
+    word-wrap: break-word;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    line-break: loose;
+}
+.contect {
+    position: absolute;
+   
+    right: 1vw;
+  }
+
+.clock {
+    position: absolute;
+    top: 10px;
+    right: 1vw;
+  }
+@media only screen and (max-width: 768px) {
+    #container {
+      height: 100vh;
+      width: 100vw;
+    }
+  }
